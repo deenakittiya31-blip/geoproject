@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assets/logo.png'
 import { BsGlobe } from "react-icons/bs";
 import { FaDropbox, FaEye, FaHotel, FaRegUserCircle } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { homeLink } from '../Link/LinkNav';
-import { IoAirplane } from 'react-icons/io5';
+import { IoAirplane, IoClose, IoMenu } from 'react-icons/io5';
 import { FaCircleUser, FaPersonWalkingLuggage } from 'react-icons/fa6';
+import MobileNavbar from './MobileNavbar';
 
 const Navbar = () => {
+    const [mobileDropdown, setMobileDropdown] = useState(false);
+
+    const hdlOpenDropdown = () => {
+        setMobileDropdown(!mobileDropdown)
+    }
+
     return (
         <nav className='fixed z-50 w-full bg-white md:px-20 flex justify-between p-3.5 font-jost font-medium text-black shadow-xs'>
-            <div className='flex gap-5 items-center text-sm'>
-                <img src={Logo} width={130} />
-                {/* home box */}
-                <div className='h-full hidden md:flex items-center gap-5'>
+            <div className='flex flex-1 gap-5 items-center text-sm'>
+
+                <div className='inline-flex items-center'>
+                    <div className='lg:hidden'>
+                        <button onClick={hdlOpenDropdown}>
+                            <IoMenu className='size-7 text-sky' />
+                        </button>
+                    </div>
+                    <img src={Logo} width={130} />
+                </div>
+                {
+                    mobileDropdown && (
+                        <MobileNavbar status={() => setMobileDropdown(false)} />
+                    )
+                }
+
+                <div className='h-full hidden lg:flex items-center gap-5'>
                     <div className='group relative h-full flex items-center'>
                         <div className='flex gap-3 items-center'>
                             <p className='text-headingColor group-hover:text-bluepr'>Home </p>
@@ -334,7 +354,7 @@ const Navbar = () => {
                     <span>|</span>
                     <BsGlobe />
                 </a>
-                <button className='flex sm:hidden justify-center items-center'><FaCircleUser className=' fill-bluepr size-7' /></button>
+                <button className='flex md:hidden justify-center items-center'><FaCircleUser className=' fill-bluepr size-7' /></button>
                 <button className='hidden md:flex items-center gap-1 bg-bluepr px-3 py-3 rounded-sm text-white'><FaRegUserCircle /> Sign In / Register</button>
             </div>
         </nav>

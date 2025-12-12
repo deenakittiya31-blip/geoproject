@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className='bg-[#0e243a]'>
             <div className=''>
-                <footer className='px-20 py-15 gap-15 grid md:grid-cols-5'>
+                <footer className='px-5 py-15 gap-15 grid lg:grid-cols-5 lg:px-20'>
                     <div>
                         <img src='https://geotrip-shreethemes.netlify.app/assets/logo-2-CayjBkWv.png' width={160} className='mb-3' />
                         <p className='text-white text-xs/6 font-medium tracking-wide'>We make your dream more beautiful & enjoyful with lots of happiness.</p>

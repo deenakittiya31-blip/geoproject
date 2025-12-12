@@ -5,7 +5,7 @@ import CardTrend from './card/CardTrend'
 
 const Trending = () => {
     return (
-        <section className='p-20'>
+        <section className='px-5 py-20 lg:px-20'>
             <SectionTitle
                 title='Hot & Trending Venues'
                 subtitle='Cicero famously orated against his political opponent Lucius Sergius Catilina.'

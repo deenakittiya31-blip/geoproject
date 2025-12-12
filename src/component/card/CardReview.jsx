@@ -4,7 +4,7 @@ import { FaQuoteRight } from "react-icons/fa6";
 
 const CardReview = ({ image, name }) => {
     return (
-        <div className='p-4 bg-white border border-gray1 rounded-md w-full max-w-[300px] md:max-w-[350px]'>
+        <div className='p-4 bg-white border border-gray1 rounded-md w-full lg:max-w-[350px]'>
             <div className='relative flex justify-between'>
                 <div className='flex items-center gap-3'>
                     <div className='w-20 h-20 overflow-clip rounded-md'>
@@ -22,7 +22,7 @@ const CardReview = ({ image, name }) => {
                         </div>
                     </div>
                 </div>
-                <div className="absolute top-0 end-0  me-3">
+                <div className="absolute top-0 end-0">
                     <button className="flex justify-center items-center rounded-full text-bluepr bg-bluese w-10 h-10">
                         <FaQuoteRight />
                     </button>

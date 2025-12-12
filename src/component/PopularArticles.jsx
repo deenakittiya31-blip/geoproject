@@ -5,12 +5,12 @@ import CardArticle from './card/CardArticle'
 
 const PopularArticles = () => {
     return (
-        <section className='px-20 pb-20'>
+        <section className='px-5 pb-20 lg:px-20'>
             <SectionTitle
                 title='Trending & Popular Articles'
                 subtitle='Cicero famously orated against his political opponent Lucius Sergius Catilina.'
             />
-            <div className='mt-10 md:grid grid-cols-3 justify-items-center gap-6'>
+            <div className='mt-10 gap-5 grid lg:grid-cols-3 justify-items-center'>
                 {
                     articleData.map((i, idx) => (
                         <CardArticle

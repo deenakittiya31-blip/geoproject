@@ -5,12 +5,12 @@ import CardReview from './card/CardReview'
 
 const Reviews = () => {
     return (
-        <section className='px-5 py-20 md:p-20 bg-[#F2F5F8]'>
+        <section className='px-5 py-20 lg:p-20 bg-[#F2F5F8]'>
             <SectionTitle
                 title='Loving Reviews By Our Customers'
                 subtitle='Cicero famously orated against his political opponent Lucius Sergius Catilina.'
             />
-            <div className='mt-10 flex flex-wrap justify-center gap-6'>
+            <div className='mt-10 flex flex-wrap justify-center gap-5'>
                 {
                     reviewData.map((i, idx) => (
                         <CardReview

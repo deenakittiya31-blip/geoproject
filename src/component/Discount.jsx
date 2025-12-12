@@ -26,7 +26,7 @@ const Discount = () => {
         },
     ]
     return (
-        <section className='mt-10 px-20 grid grid-cols-1 lg:grid lg:grid-cols-3 gap-4'>
+        <section className='mt-10 px-5 grid grid-cols-1 lg:px-20 lg:grid lg:grid-cols-3 gap-4'>
             {
                 data.map((i, inx) => (
                     <CardDiscount

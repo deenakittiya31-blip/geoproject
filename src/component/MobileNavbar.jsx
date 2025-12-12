@@ -4,7 +4,7 @@ import { FaPersonWalkingLuggage } from 'react-icons/fa6';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoAirplane, IoClose } from 'react-icons/io5';
 
-const MobileNavbar = ({ status }) => {
+const MobileNavbar = ({ isOpen, onClose }) => {
     const [home, setHome] = useState(false);
     const [list, setList] = useState(false);
     const [page, setPage] = useState(false);
@@ -23,11 +23,20 @@ const MobileNavbar = ({ status }) => {
 
     }
     return (
-        <div className='fixed inset-0 z-50 bg-black/50 lg:hidden'>
-            <div className='bg-white w-[60%] h-full p-5 overflow-y-auto'>
+        <div className={`fixed inset-0 z-50 transition-opacity duration-500 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}>
+
+            <div
+                className="absolute inset-0 bg-black/50 transition-opacity duration-300"
+                onClick={onClose}
+            />
+
+            <div className={`relative bg-white w-[60%] h-full p-5 overflow-y-auto transition-transform duration-500 ease-out shadow-2xl ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                }`}>
+
                 <div className='flex justify-end'>
                     <button
-                        onClick={status}
+                        onClick={onClose}
                         className=" bg-bluese w-10 h-10 p-1 flex justify-center items-center rounded-full mb-5"
                     >
                         <IoClose size={30} className='text-bluepr' />

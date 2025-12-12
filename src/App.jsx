@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import Navbar from './component/Navbar'
-import Hero from './component/Hero'
 import Discount from './component/Discount'
 import BestAttraction from './component/BestAttraction'
 import PopularLocation from './component/PopularLocation'
@@ -11,14 +9,16 @@ import Memories from './component/Memories'
 import PopularArticles from './component/PopularArticles'
 import Subscripe from './component/Subscripe'
 import Footer from './component/Footer'
+import Navbar2 from './component/Navbar2'
+import HeroNew from './component/HeroNew'
 
 
 function App() {
 
   return (
     <div>
-      <Navbar />
-      <Hero />
+      <Navbar2 />
+      <HeroNew />
       <main>
         <Discount />
         <BestAttraction />

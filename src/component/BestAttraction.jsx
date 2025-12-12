@@ -47,12 +47,12 @@ const BestAttraction = () => {
         },
     ]
     return (
-        <section className='p-20'>
+        <section className='px-5 py-20 :lg:p-20'>
             <SectionTitle
                 title='Best Attraction In USA'
                 subtitle='Cicero famously orated against his political opponent Lucius Sergius Catilina.'
             />
-            <div className='mt-10 gap-6 grid sm:grid-cols-2 lg:grid-cols-4 '>
+            <div className='mt-10 gap-5 grid sm:grid-cols-2 lg:grid-cols-4 '>
                 {
                     data.map((i, idx) => (
                         <CardAttraction

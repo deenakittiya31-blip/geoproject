@@ -47,12 +47,12 @@ const PopularLocation = () => {
     ]
 
     return (
-        <section className='py-20 bg-[#f1f5f8]'>
+        <section className='px-5 py-20 bg-[#f1f5f8] lg:px-20'>
             <SectionTitle
                 title='Popular Location To Stay'
                 subtitle='Cicero famously orated against his political opponent Lucius Sergius Catilina.'
             />
-            <div className='mt-10 px-20 gap-4 grid sm:grid-cols-2 lg:grid-cols-4'>
+            <div className='mt-10 gap-4 grid sm:grid-cols-2 lg:grid-cols-4'>
                 {
                     data.map((i, idx) => (
                         <CardPopular
